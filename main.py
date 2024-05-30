@@ -30,7 +30,7 @@ async def audio_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         os.remove(wav_path)
 
 def main() -> None:
-    TOKEN = os.getenv(TOKEN_NUM)
+    TOKEN = TOKEN_NUM
     application = Application.builder().token(TOKEN).build()
 
     application.add_handler(CommandHandler("start", start))
